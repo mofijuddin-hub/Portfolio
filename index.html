@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF‑8">
+  <meta http-equiv="X‑UA‑Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My own — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Boxicons icon set -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="site-header" id="home">
+  <h1>MofijuddinAhmed</h1>
+  <nav aria-label="Main navigation">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+
+
+<button id="theme-toggle" role="switch" aria-label="Activate dark mode" aria-checked="false">
+  <i class="bx bx-moon" aria-hidden="true">🌙</i>
+  <i class="bx bx-sun" aria-hidden="true">☀️</i>
+</button>
+
+
+</header>
+<main>
+  
+
+  <section class="hero">
+    <div class="text-box">
+      <h2>I'm a <span>developer</span>
+        <span>Desginer</span></h2>
+      <p>Creating interactive 3D & web experiences with HTML/CSS/JS</p>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
+
+    <section id="about" class="about-section">
+  <div class="about-content">
+    <figure class="profile-photo">
+      <img src="My pic.jpg"
+           alt="Portrait of Mofijuddin Ahmed"
+           width="250" height="250">
+      <figcaption>Mofijuddin Ahmed</figcaption>
+    </figure>
+  </section>
+
+
+    <h1>Hello, I’m Mofijuddin Ahmed</h1>
+    <h2>I'm a <span>Developer</span>
+      <span>Desginer</span></h2>
+  </div>
+  
+</section>
+ <section id="about" class="about-section">
+  <div class="about-content">
+    <figure class="profile-photo">
+      <img src="My pic.jpg"
+           alt="Portrait of Mofijuddin Ahmed"
+           width="250" height="250" loading="lazy">
+      <figcaption>Mofijuddin Ahmed</figcaption>
+    </figure>
+
+    <div class="bio-details">
+      <h2>About Me</h2>
+      <p>Hello! I’m Mofijuddin, a passionate <strong>Frontend Developer</strong> specializing in HTML, CSS, JavaScript, and modern web design. I love creating interactive, user‑focused experiences on the web.</p>
+
+      <ul class="bio-list">
+        <li><strong>🎓 Education:</strong> B.voc in Computer laungauage(2025)</li>
+        <li><strong>🛠️ Tools:</strong> VSCode, Git, React, Three.js</li>
+        <li><strong>📈 Certifications:</strong> Front-End via freeCodeCamp</li>
+      </ul>
+
+      <a href="resume.pdf" class="btn-download">Download CV</a>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript-enhanced timeline or fun fact counters -->
+  <div class="about-timeline">
+    <h3>Timeline</h3>
+    <ul>
+      <li><time datetime="2022-05">May 20226</time> Graduate from University</li>
+      <li><time datetime="2028-11">Nov 2028</time> First website launched</li>
+      <li><time datetime="2025-06">Dec 2025</time> Published 3‑page portfolio online</li>
+    </ul>
+  </div>
+</section>
+
+
+       <section id="skills" aria-labelledby="skills-heading">
+  <h2 id="skills-heading">Skills & Expertise</h2>
+
+  <div class="skill-cards">
+    <article class="skill-card" aria-label="HTML skill info">
+      <header>
+        <i class="bx bxl-html5" aria-hidden="true"></i>
+        <h3>HTML5</h3>
+      </header>
+      <div class="level" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90">
+        <div class="filled" style="width: 90%;"></div>
+      </div>
+      <p>Semantic markup, ARIA, mobile‑first design.</p>
+      <button type="button" class="details-btn" aria-expanded="false" aria-controls="html-details">
+        More about HTML
+      </button>
+      <div id="html-details" class="details" hidden>
+        <ul>
+          <li>Forms & validation</li>
+          <li>Responsive images & `<picture>`</li>
+          <li>Microdata & SEO structure</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="skill-card" aria-label="CSS skill info">
+      <header>
+        <i class="bx bxl-css3" aria-hidden="true"></i>
+        <h3>CSS3</h3>
+      </header>
+      <div class="level" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="95">
+        <div class="filled" style="width: 95%;"></div>
+      </div>
+      <p>Flexbox, Grid, custom properties & animations.</p>
+      <button type="button" class="details-btn" aria-expanded="false" aria-controls="css-details">
+        More about CSS
+      </button>
+      <div id="css-details" class="details" hidden>
+        <ul>
+          <li>CSS Grid & auto-fill layouts</li>
+          <li>Keyframe and hover animations</li>
+          <li>Responsive media queries</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="skill-card" aria-label="JavaScript skill info">
+      <header>
+        <i class="bx bxl-javascript" aria-hidden="true"></i>
+        <h3>JavaScript</h3>
+      </header>
+      <div class="level" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="85">
+        <div class="filled" style="width: 85%;"></div>
+      </div>
+      <p>DOM, ES6+, async/await, fetch + UI logic.</p>
+      <button type="button" class="details-btn" aria-expanded="false" aria-controls="js-details">
+        More about JavaScript
+      </button>
+      <div id="js-details" class="details" hidden>
+        <ul>
+          <li>Fetch API & async data handling</li>
+          <li>ES modules & arrow functions</li>
+          <li>Typewriter & scroll-intersect logic</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+
+  <section id="projects" aria-labelledby="projects-heading">
+  <h2 id="projects-heading">Featured Projects</h2>
+
+  <div class="project-filters" role="toolbar" aria-label="Filter projects">
+    <button data-filter="all" aria-pressed="true">All</button>
+    <button data-filter="web">Web Apps</button>
+    <button data-filter="game">Games</button>
+    <button data-filter="ui">UI/UX Designs</button>
+  </div>
+     <ul class="project-grid">
+    <li class="project-card" data-category="web">
+      <article>
+        <figure>
+          <img src="op.jpg" alt="Screenshot of Demo 1 app" loading="lazy">
+          <figcaption>Demo 1 — Web App</figcaption>
+        </figure>
+      
+        <h3><a href="https://github.com/yourname/demo1">Demo 1</a></h3>
+        <p>Responsive SPA built with HTML, CSS, and vanilla JS; fetches weather from an API.</p>
+        <p class="meta"><time datetime="2026-01">Jan 2026</time> • <a href="#">Live demo</a></p>
+      </article>
+    </li>
+     <ul class="project-grid">
+    <li class="project-card" data-category="web">
+      <article>
+        <figure>
+          <img src="images.jpg" alt="Screenshot of Demo 2 app" loading="lazy">
+          <figcaption>Demo 2— Web App</figcaption>
+        </figure>
+      
+        <h3><a href="https://github.com/yourname/demo1">Demo 2 </a></h3>
+        <p>Responsive 3D model built with AI 3D Model.</p>
+        <p class="meta"><time datetime="2026-05">Mar 2026</time> • <a href="#">Live demo</a></p>
+      </article>
+ 
+
+    <!-- Copy and paste & update for 4–8 more cards -->
+  </ul>
+</section>
+
+  <section id="contact"><h2>Contact</h2>
+    <form action="#" method="post">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<footer>&copy; 2025 Mofijuddin Ahmed . Made with ❤️</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r150/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
