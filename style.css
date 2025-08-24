@@ -172,9 +172,9 @@ body {
 /* Light theme (default): */
 :root {
   color-scheme: light;
-  --bg: #ffffff;
+  --bg: #f5ecec;
   --text: #222222;
-  --primary: #4CAF50;
+  --primary: #1ae613;
 }
 
 /* Dark theme override */
@@ -182,7 +182,7 @@ body {
   color-scheme: dark;
   --bg: #121212;
   --text: #e0e0e0;
-  --primary: #64b5f6;
+  --primary: #28b80b;
 }
 
 
@@ -192,7 +192,7 @@ body {
   height: 200px;
   object-fit: cover;
   border-radius: 100px;
-  border: 2px solid var(--clr-primary, #020202);
+  border: 2px solid var(--clr-primary, #222121);
 }
 
 @media (max-width: 600px) {
@@ -204,13 +204,13 @@ body {
 :root {
   --clr-bg: #ffffff;
   --clr-text: #020000;
-  --clr-primary: #4CAF50;
+  --clr-primary: #1c9b21;
   --card-shadow: rgba(0, 0, 0, 0.08);
-  --transition: 0.5s ease;
+  --transition: 0.10s ease;
 }
 .about-section {
   padding: 4rem 2%;
-  background-color: #f8f8f9;
+  background-color: #f3f2f2;
   color: #000000;
 }
 
@@ -232,7 +232,7 @@ body {
   width: 100%;
   height: auto;
   border-radius: 50%;   /* perfectly circular */
-  border: 3px solid #4CAF50;
+  border: 5px solid #0dd1eb;
   object-fit: cover;
 }
 
@@ -264,7 +264,7 @@ body {
 .bio-details a.btn-download {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #1cd822;
+  background-color: #0cf117;
   color: rgb(0, 0, 0);
   text-decoration: none;
   border-radius: 4px;
@@ -273,7 +273,7 @@ body {
 }
 
 .bio-details a.btn-download:hover {
-  background-color: #25ce2e;
+  background-color: #0fda0f;
 }
 
 .about-timeline {
@@ -301,7 +301,7 @@ body {
   content: '•';
   position: absolute;
   left: 0;
-  color: #4CAF50;
+  color: #1ee024;
   font-weight: bold;
 }
 
@@ -378,7 +378,7 @@ body {
   height: 100%;
   background: var(--clr-primary);
   border-radius: inherit;
-  transition: width 0.6s ease-out;
+  transition: width 0.10s ease-out;
 }
 
 .skill-card .details-btn {
@@ -397,7 +397,7 @@ body {
 }
 
 .skill-card .details-btn[aria-expanded="true"] {
-  background: #388E3C;
+  background: #33d80a;
 }
 
 .skill-card .details {
