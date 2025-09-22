@@ -2,12 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap');
 
 :root {
-  --clr-bg: #242829;
-  --clr-text: #ffffff;
-  --clr-primary: #000000;
+  --clr-bg: #f2f7f8;
+  --clr-text: #000000;
+  --clr-primary: #0791ec;
   --transition: 0.3s ease;
 }
-[data-theme="dark"] {
+.darkMode {
   --clr-bg: #000000;
   --clr-text: #e0e0e0;
   --clr-primary: #64b5f6;
@@ -27,60 +27,32 @@ body {
 }
 
 
-/* Apply theme variables */
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 200ms ease, color 200ms ease;
-}
+/* Dark mode */
+    body.dark-mode { background: #1b1b1b; color: #ffffff; }
+    body.dark-mode header { background: #424242; }
 
-/* Button styling and icon swapping */
-#theme-toggle {
-  background: none;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-size: 1.4rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3em;
-  padding: 0.3em;
-}
+    /* Dark mode button */
+    #darkModeToggle {
+      font-size: 18px;
+      border: none;
+      border-radius: 50%;
+      padding: 8px;
+      cursor: pointer;
+      background: #ebdfdf;
+    }
+    body.dark-mode #darkModeToggle { background: #242323; color: #fff; }
 
-#theme-toggle .bx-sun {
-  display: none;
-}
-:root[data-theme="dark"] #theme-toggle .bx-moon {
-  display: none;
-}
-:root[data-theme="dark"] #theme-toggle .bx-sun {
-  display: inline;
-}
 
-/* Focus outline for accessibility */
-#theme-toggle:focus-visible {
-  outline: 2px dashed var(--primary);
-  outline-offset: 2px;
-}
 
-/* Theme toggle button styles */
-#theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.6rem;
-  color: inherit;
-  cursor: pointer;
-}
-#theme-toggle:focus {
-  outline: 2px dashed var(--clr-primary);
-}
+
+
 
 
 /* HEADER */
 .site-header {
-  position: fixed; top: 0; width: 100%; background: var(--clr-bg);
+  position: fixed; top: 0; width: 100%;  background: var(--clr-bg);
   display: flex; justify-content: space-between; align-items: center;
-  padding: 1rem 2%;
+  padding: 1rem 5%;
   border-bottom: 1px solid rgba(0,0,0,0.1);
   z-index: 1000;
 }
@@ -104,32 +76,23 @@ body {
   left: 0; bottom: 3px; transition: width 0.25s;
 }
 .site-header nav a:hover::after {
-  width: 50%;
+  width: 100%;
 }
-:root[data-theme="light"] {
-  color-scheme: light;
-  --bg: #ffffff;
-  --text: #222222;
-  --primary: #549696;
+  
+.home-src {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
 }
 
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #121212;
-  --text: #e0e0e0;
-  --primary: #64b5f6;
-}
 
 
 
 /* HERO */
 .hero {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  min-height: 80vh;
-  margin-top: 5rem;
+  max-width: 80vh;
+   margin-top: 5rem;
   gap: 2rem;
   padding: 1rem;
 }
@@ -143,7 +106,7 @@ body {
 .hero p { margin: 1rem 0; }
 .hero .btn {
   background-color: var(--clr-primary);
-  color: #000000;
+  color: #f3f1f1;
   display: inline-block;
   padding: .75rem 1.5rem;
   border-radius: 4px;
@@ -153,37 +116,7 @@ body {
 .hero .btn:hover {
   background-color: hsl(207, 100%, 40%);
 }
-/* Apply the theme values */
-body {
-  background-color: var(--bg);
-  color: var(--text);
-  transition: background-color 200ms ease, color 200ms ease;
-}
 
-/* Toggle Icon Styles */
-#theme-toggle {
-  font-size: 1.2rem;
-  color: var(--text);
-  background: none;
-  border: none;
-  padding: 0.5rem;
-  cursor: pointer;
-}
-/* Light theme (default): */
-:root {
-  color-scheme: light;
-  --bg: #f5ecec;
-  --text: #222222;
-  --primary: #1ae613;
-}
-
-/* Dark theme override */
-:root[data-theme="dark"] {
-  color-scheme: dark;
-  --bg: #121212;
-  --text: #e0e0e0;
-  --primary: #28b80b;
-}
 
 
 .profile-img {
@@ -192,26 +125,73 @@ body {
   height: 200px;
   object-fit: cover;
   border-radius: 100px;
-  border: 2px solid var(--clr-primary, #222121);
+  border: 2px solid var(--clr-primary, #111111);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
 }
 :root {
-  --clr-bg: #ffffff;
+  --clr-bg: #fcf6f6;
   --clr-text: #020000;
-  --clr-primary: #1c9b21;
-  --card-shadow: rgba(0, 0, 0, 0.08);
+  --clr-primary: #17ca20;
+  --card-shadow: rgba(12, 8, 8, 0.08)
   --transition: 0.10s ease;
 }
-.about-section {
+
+
+
+.social-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.social-links a {
+  background-color:floralwhite;
+  padding: 1em;
+  border-radius: 50%;
+ 
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.social-links a {
+  font-size: 28px;
+  color: #070707;
+  text-decoration: none;
+  transition: color 0.5s, transform 0.3s;
+}
+
+
+/* Hover effects */
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+
+
+.social-links a:nth-child(1):hover { color: #E4405F; }  /* Instagram */
+.social-links a:nth-child(2):hover { color: #1877F2; }  /* Facebook */
+.social-links a:nth-child(3):hover { color: #FF0000; }  /* YouTube */
+.social-links a:nth-child(4):hover { color: #1877F2; }  /* telegram */
+
+/* Dark mode colors */
+body.dark-mode .social-links a {
+  color: #0c0606;
+} 
+
+/* about-section */
+
+#about-section {
+
   padding: 4rem 2%;
-  background-color: #f3f2f2;
-  color: #000000;
+  background-color: var(--clr-bg);
+  color: var(--clr-text)
 }
 
 .about-content {
@@ -223,6 +203,7 @@ body {
   align-items: center;
 }
 
+
 .profile-photo {
   width: 250px;
   text-align: center;
@@ -232,14 +213,14 @@ body {
   width: 100%;
   height: auto;
   border-radius: 50%;   /* perfectly circular */
-  border: 5px solid #0dd1eb;
+  border: 6px solid  #0ee7dc; 
   object-fit: cover;
 }
 
 .profile-photo figcaption {
   margin-top: 0.5rem;
   font-size: 1.1rem;
-  color: #666;
+  color: #1b1a1a;
 }
 
 .bio-details {
@@ -264,8 +245,8 @@ body {
 .bio-details a.btn-download {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #0cf117;
-  color: rgb(0, 0, 0);
+  background-color: #13ec0c;
+  color: rgb(247, 243, 243);
   text-decoration: none;
   border-radius: 4px;
   font-weight: 500;
@@ -273,7 +254,7 @@ body {
 }
 
 .bio-details a.btn-download:hover {
-  background-color: #0fda0f;
+  background-color: #27a0f0;
 }
 
 .about-timeline {
@@ -301,7 +282,7 @@ body {
   content: '•';
   position: absolute;
   left: 0;
-  color: #1ee024;
+  color: #0af0d1;
   font-weight: bold;
 }
 
@@ -316,13 +297,16 @@ body {
 }
 
 
-#skills {
+#skills  section {
+  height: 100%;
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
   max-width: 900px;
   margin: 4rem auto;
   padding: 0 2rem;
 }
 
-#skills h2 {
+.skills h2 {
   font-size: 2rem;
   margin-bottom: 1.5rem;
   color: var(--clr-text);
@@ -333,13 +317,16 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.5rem;
+  animation-delay: 5s;
 }
-
+.skill-card p{
+  color: rgb(255, 255, 255);
+}
 .skill-card {
-  background: #fff;
+  background: #70d0f0;
   border-radius: 8px;
   padding: 1.75rem 1.2rem;
-  box-shadow: 0 4px 8px var(--card-shadow);
+  box-shadow: 0 6px 10px var(--card-shadow);
   transition: transform var(--transition), box-shadow var(--transition);
 }
 
@@ -353,7 +340,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
 }
 
 .skill-card header i {
@@ -368,7 +355,7 @@ body {
 
 .level {
   height: 0.4rem;
-  background: #eee;
+  background: #d6bfbf;
   border-radius: 0.2rem;
   margin: 0.75rem 0;
   overflow: hidden;
@@ -383,7 +370,7 @@ body {
 
 .skill-card .details-btn {
   background: var(--clr-primary);
-  color: #fff;
+  color: #f1e9e9;
   border: none;
   padding: 0.5rem 1rem;
   border-radius: 4px;
@@ -397,7 +384,7 @@ body {
 }
 
 .skill-card .details-btn[aria-expanded="true"] {
-  background: #33d80a;
+  background: #61ec3e;
 }
 
 .skill-card .details {
@@ -410,18 +397,18 @@ body {
   list-style: disc;
 }
 
-#projects {
+#projects section {
   max-width: 1200px;
   margin: 4rem auto;
   padding: 0 2rem;
 }
 
-#projects h2 {
+.projects h2 {
   font-size: clamp(2rem, 4vw, 2.4rem);
   text-align: center;
 }
 
-.project-filters {
+#project-filters {
   display: flex;
   gap: 0.6rem;
   justify-content: center;
@@ -443,7 +430,7 @@ body {
 .project-filters button[aria-pressed="true"],
 .project-filters button:hover {
   background: var(--clr-primary);
-  color: #fff;
+  color: #ffffff;
 }
 
 .project-grid {
@@ -456,9 +443,9 @@ body {
 
 /* Hover cards */
 .project-card article {
-  background: #fff;
+  background: #d6d4d4;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgb(118, 240, 5);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -467,7 +454,7 @@ body {
 .project-card article:hover,
 .project-card article:focus-within {
   transform: translateY(-4px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 /* Image & Text */
